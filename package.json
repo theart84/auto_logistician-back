@@ -22,11 +22,11 @@
     "url": "https://github.com/theart84/auto_logistician-back/issues"
   },
   "homepage": "https://github.com/theart84/auto_logistician-back#readme",
-  "devDependencies": {
-    "dotenv": "^10.0.0",
+  "devDependencies": {    
     "nodemon": "^2.0.9"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
