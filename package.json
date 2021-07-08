@@ -21,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/theart84/auto_logistician-back/issues"
   },
-  "homepage": "https://github.com/theart84/auto_logistician-back#readme"
+  "homepage": "https://github.com/theart84/auto_logistician-back#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  }
 }

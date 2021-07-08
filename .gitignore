@@ -1,0 +1,15 @@
+#node_modules
+node_modules
+
+#IDE
+.vscode
+.idea
+
+#package-lock.json
+package-lock.json
+
+#env
+.env
+
+#config
+config
