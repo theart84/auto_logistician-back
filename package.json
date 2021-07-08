@@ -1,0 +1,25 @@
+{
+  "name": "auto_logistician-back",
+  "version": "1.0.0",
+  "description": "Backend server for auto logistician app",
+  "main": "index.js",
+  "engines": {
+    "node": "14.16.1",
+    "npm": "6.14.12"
+  },
+  "scripts": {
+    "start": "node index",
+    "server": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theart84/auto_logistician-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theart84/auto_logistician-back/issues"
+  },
+  "homepage": "https://github.com/theart84/auto_logistician-back#readme"
+}
