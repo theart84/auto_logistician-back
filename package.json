@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/theart84/auto_logistician-back#readme",
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "nodemon": "^2.0.9"
   },
   "dependencies": {
