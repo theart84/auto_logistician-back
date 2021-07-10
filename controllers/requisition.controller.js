@@ -40,10 +40,10 @@ class RequisitionController {
 
   async createRequisition(req, res) {
     console.log(req.body);
-    const {requisitionNumber, requisitionCreate, companyName, nameOfCarrier, phoneCarrier, comments, atiCode} = req.body;
+    const {requisitionNumber, dateReceivingRequisition, companyName, nameOfCarrier, phoneCarrier, comments, atiCode} = req.body;
     const requisition = await this.service.createRequisition({
       requisitionNumber,
-      requisitionCreate,
+      dateReceivingRequisition,
       companyName,
       nameOfCarrier,
       phoneCarrier,

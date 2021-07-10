@@ -6,8 +6,8 @@ const RequisitionSchema = new Schema({
   type: String,
   required: true
   },
-  requisitionCreate: {
-    type: String,
+  dateReceivingRequisition: {
+    type: Number,
     required: true
   },
   companyName: {
