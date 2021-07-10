@@ -11,7 +11,7 @@ class RequisitionService {
   }
 
   async getRequisitions() {
-    const requisition = await Requisition.find();
+    const requisition = await Requisition.find().select('-__v');
     if (requisition) {
       return requisition;
     } else {

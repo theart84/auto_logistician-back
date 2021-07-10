@@ -28,7 +28,7 @@ class RequisitionController {
       const data = await this.service.getRequisitions();
       res.status(200).json({
         status: 'ok',
-        requsition: data,
+        requisition: data,
       });
     } catch (error) {
       res.status(404).json({
