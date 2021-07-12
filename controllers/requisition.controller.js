@@ -26,10 +26,12 @@ class RequisitionController {
   async getRequisitions(req, res) {
     try {
       const data = await this.service.getRequisitions();
-      res.status(200).json({
+    //  setTimeout(() => {
+        res.status(200).json({
         status: 'ok',
         requisition: data,
       });
+    //  }, 1500) 
     } catch (error) {
       res.status(404).json({
         status: 'error',
@@ -39,7 +41,6 @@ class RequisitionController {
   }
 
   async createRequisition(req, res) {
-    console.log(req.body);
     const {requisitionNumber, dateReceivingRequisition, companyName, nameOfCarrier, phoneCarrier, comments, atiCode} = req.body;
     const requisition = await this.service.createRequisition({
       requisitionNumber,
@@ -61,10 +62,11 @@ class RequisitionController {
     const findRequisition = await this.service.getRequisitionByID(id);
     if (findRequisition) {
       const updateData = {...req.body}
-      const requisition = await this.service.findByIdAndUpdate(id, updateData);
+      await this.service.editRequisition(id, updateData);
+      const data = await this.service.getRequisitions()
       res.status(200).json({
         status: 'ok',
-        requisition
+        requisition: data
       });
     } else {
       res.status(404).json({
@@ -76,10 +78,10 @@ class RequisitionController {
 
   async deleteRequisition(req, res) {
     const {id} = req.params;
-    await this.service.deleteRequisition(id)
+    const requisition = await this.service.deleteRequisition(id)
     res.status(200).json({
       status: 'ok',
-      message: 'The ticket has been successfully deleted',
+      requisition,
     });
   }
 
