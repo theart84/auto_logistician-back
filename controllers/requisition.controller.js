@@ -26,12 +26,10 @@ class RequisitionController {
   async getRequisitions(req, res) {
     try {
       const data = await this.service.getRequisitions();
-    //  setTimeout(() => {
         res.status(200).json({
         status: 'ok',
         requisition: data,
       });
-    //  }, 1500) 
     } catch (error) {
       res.status(404).json({
         status: 'error',
